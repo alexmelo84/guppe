@@ -19,3 +19,5 @@ print(nome[0:5])
 print(nome[::-1])
 # substituição
 print(nome.replace('e', 'u'))
+# Multiplica a string
+print(nome * 3)
