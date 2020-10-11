@@ -129,4 +129,88 @@ print(cores[3])
 # Acesso aos itens pelo índice de forma reversa
 print(cores[-3])
 
-# vídeo parado em 1:32:35
+# Utilizando o while
+indice = 0
+while indice < len(cores):
+    print(cores[indice])
+    indice = indice + 1
+
+# Pegando índice
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+
+# Aceita repetição
+lista10 = [1, 2, 3, 1, 3, 6, 7, 8, 2]
+print(lista10)
+
+# Retornar o índice de um valor (retorna o índice do primeiro valor encontrado se houver valores repetidos)
+lista11 = [10, 12, 14, 16, 18, 20, 22]
+print(lista11.index(14))
+
+# Retorna o índice de um valor a partir de uma posição da lista (o segundo parâmetro é a posição inicial dentro da
+# lista que a busca será iniciada)
+print(lista11.index(18, 4))
+
+# Retorna o índice de um valor dentro de uma posição inicial e final (o terceiro parâmetro marca o limite da busca)
+print(lista11.index(12, 0, 3))
+
+# Slice
+# Com o parâmetro início
+lista12 = [1, 2, 3, 4, 5]
+print(lista12[::])  # exibe todos os itens
+print(lista12[1:])  # exibe a partir da posição 1 da lista
+print(lista12[-2:])
+
+# Com o parâmetro fim
+print(lista12[:3])  # vai até a posição anterior a informada (nesse caso irá até a posição 2)
+print(lista12[2:4])
+
+# Com o parâmtro passo
+print(lista12[::2])  # pega todos os elementos de 2 em 2
+print(lista12[1::2])
+print(lista12[2::-1])  # inverte o retorno
+
+# Somar, procurar valores máximo e mínimo e tamanho
+lista13 = list(range(8))
+print(sum(lista13))
+print(max(lista13))
+print(min(lista13))
+print(len(lista13))
+
+# Transformar em tupla
+print(lista13)
+print(type(lista13))
+
+tupla = tuple(lista13)
+print(tupla)
+print(type(tupla))
+
+# Desempacotar
+lista14 = [1, 2, 3, 4]
+num1, num2, num3, num4 = lista14
+print(num1, num2, num3, num4)
+
+# Copiando uma lista para outra
+# Deep copy (ao copiar uma lista para uma nova lista as alterações afetarão somente a lista alterada. No exemplo abaixo
+# copia-se a lista15 para novaLista, adiciona um valor na novaLista e a lista15 continua sem alteração)
+lista15 = [1, 2, 3, 4, 5, 6]
+print(lista15)
+
+novaLista = lista15.copy()
+print(novaLista)
+novaLista.append(7)
+print(lista15)
+print(novaLista)
+
+# Shallow copy (ao atribuir uma lista a uma nova lista as alterações serão compartilhadas. No exemplo abaixo copia-se
+# a lista16 para novaLista2 e, ao adicionar um valor na novaLista2, esse valor também é adicionado na lista16)
+lista16 = ['a', 'b', 'c', 'd']
+print(lista16)
+
+novaLista2 = lista16
+print(novaLista2)
+
+novaLista2.append('e')
+lista16.append('f')
+print(lista16)
+print(novaLista2)
