@@ -8,6 +8,12 @@ O corpo da função é onde ocorre o processamento da função, deve ter uma ide
 
 def nome_funcao(parametros):
     codigo_da_funcao
+
+Nas funções a ordem dos parâmetros é:
+- parâmetros obrigatórios;
+- *args;
+- parâmetros com valor padrão (não obrigatório);
+- e **kwargs.
 """
 
 cores = ['vermelho', 'verde', 'blue']
